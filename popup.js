@@ -45,7 +45,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         tabs[0].id,
         { code: `document.getElementById('navigation-app').style.display;` },
         (result) => {
-            switchBtn.checked = (result[0] != 'block')
+            switchBtn.checked = (result[0] == 'none')
         });
 });
 
